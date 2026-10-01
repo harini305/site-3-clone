@@ -25,6 +25,11 @@
   padding: 60px 35px 130px;
 }
 
+/* Grid items default to min-width:auto, which lets Swiper grow without bound */
+.top > * {
+  min-width: 0;
+}
+
 .summary {
   display: flex;
   flex-direction: column;
