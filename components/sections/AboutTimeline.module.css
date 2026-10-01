@@ -1,0 +1,167 @@
+.timeline {
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  margin-left: -1.5px;
+  background: var(--orange);
+  transform-origin: top;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'media text';
+  column-gap: 60px;
+  align-items: start;
+  position: relative;
+}
+
+.row + .row {
+  margin-top: 0;
+}
+
+.reverse {
+  grid-template-areas: 'text media';
+}
+
+.media {
+  grid-area: media;
+}
+
+.img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 654 / 384;
+  object-fit: cover;
+}
+
+.reverse .media {
+  margin-top: 14px;
+}
+
+.text {
+  grid-area: text;
+  padding: 0 0 0 220px;
+}
+
+.reverse .text {
+  padding: 140px 220px 0 0;
+}
+
+.text h2 {
+  font-size: 50px;
+  line-height: 1.3;
+  margin-bottom: 36px;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.year {
+  position: absolute;
+  left: 50%;
+  top: 110px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.reverse .year {
+  top: auto;
+  bottom: 160px;
+  flex-direction: row-reverse;
+  transform: translateX(-100%);
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.reverse .dot {
+  margin: 0 -8px 0 0;
+}
+
+.dash {
+  width: 44px;
+  height: 3px;
+  background: var(--orange);
+}
+
+.year p {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+@media (max-width: 1200px) {
+  .text {
+    padding-left: 160px;
+  }
+  .reverse .text {
+    padding-right: 160px;
+  }
+  .text h2 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .line {
+    left: 8px;
+  }
+  .row,
+  .reverse {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'year' 'media' 'text';
+    padding-left: 50px;
+    row-gap: 24px;
+    margin-bottom: 60px;
+  }
+  .year,
+  .reverse .year {
+    position: static;
+    grid-area: year;
+    transform: none;
+    flex-direction: row;
+    margin-left: -50px;
+  }
+  .dot,
+  .reverse .dot {
+    margin: 0 0 0 0;
+  }
+  .text,
+  .reverse .text {
+    padding: 0;
+  }
+  .reverse .media {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .text h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+  .year p {
+    font-size: 30px;
+  }
+  .img {
+    border-radius: var(--radius);
+  }
+}

@@ -1,0 +1,62 @@
+.form {
+  display: grid;
+  gap: 20px;
+  max-width: 960px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.note {
+  margin: -10px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.rating {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.rating legend {
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  font-size: 26px;
+  color: var(--orange);
+  cursor: pointer;
+  line-height: 0;
+  padding: 2px;
+  border-radius: 6px;
+}
+
+.star:focus-within {
+  outline: 2px solid var(--black);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form > button {
+  justify-self: start;
+}
+
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

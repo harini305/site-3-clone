@@ -1,0 +1,78 @@
+.wrap {
+  margin-bottom: 30px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.slider {
+  position: relative;
+  height: 18px;
+}
+
+.track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  background: linear-gradient(
+    to right,
+    var(--line) var(--lo),
+    var(--orange) var(--lo),
+    var(--orange) var(--hi),
+    var(--line) var(--hi)
+  );
+}
+
+.range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  margin: 0;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--orange);
+  cursor: grab;
+  box-shadow: 0 0 0 4px rgba(244, 149, 44, 0.18);
+}
+
+.range::-moz-range-thumb {
+  pointer-events: auto;
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--orange);
+  cursor: grab;
+}
+
+.range:focus-visible {
+  outline: none;
+}
+
+.range:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px var(--black);
+}
+
+.range:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 4px var(--black);
+}

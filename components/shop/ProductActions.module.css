@@ -1,0 +1,55 @@
+.buy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.secondary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.wish {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  height: 58px;
+  padding: 0 32px;
+  border: 1px solid #ccc;
+  border-radius: var(--pill);
+  background: var(--white);
+  font-size: 16px;
+  color: var(--ink);
+  transition: border-color 0.25s;
+}
+
+.wish svg {
+  font-size: 28px;
+  color: var(--danger);
+}
+
+.wish:hover {
+  border-color: var(--danger);
+}
+
+.share {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  background: none;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.share svg {
+  font-size: 26px;
+}
+
+.share:hover {
+  color: var(--orange);
+}

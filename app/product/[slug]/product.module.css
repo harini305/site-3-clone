@@ -1,0 +1,123 @@
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  padding-top: 20px;
+}
+
+.crumbs li + li::before {
+  content: '/';
+  margin-right: 8px;
+  color: #bbb;
+}
+
+.crumbs a:hover {
+  color: var(--orange);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 580fr 650fr;
+  gap: 105px;
+  align-items: center;
+  padding: 60px 35px 130px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 440px;
+}
+
+.title {
+  font-size: 46px;
+  font-weight: 700;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 15px;
+}
+
+.rating a:hover {
+  color: var(--orange);
+}
+
+.short {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.cats {
+  margin: 30px 0 0;
+}
+
+.cats strong {
+  font-size: 20px;
+  color: var(--black);
+  margin-right: 6px;
+}
+
+.cats a:hover {
+  color: var(--orange);
+}
+
+.related {
+  padding: 70px 0 120px;
+  border-top: 1px solid var(--line);
+  margin-top: 64px;
+  text-align: center;
+}
+
+.relatedTitle {
+  font-size: 40px;
+}
+
+.relatedSub {
+  margin: 10px 0 60px;
+  color: var(--ink);
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding-inline: 0;
+  }
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .top {
+    grid-template-columns: 1fr;
+    padding: 30px 0 70px;
+  }
+  .title {
+    font-size: 34px;
+  }
+  .relatedTitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+}

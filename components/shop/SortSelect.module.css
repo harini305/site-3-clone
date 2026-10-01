@@ -1,0 +1,43 @@
+.sort {
+  position: relative;
+  height: 58px;
+  min-width: 220px;
+  border-radius: var(--pill);
+  background: var(--black);
+  color: var(--white);
+  transition: background 0.25s;
+}
+
+.sort:hover {
+  background: var(--orange);
+}
+
+.sort:focus-within {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 100%;
+  padding: 0 36px;
+  font-size: 17px;
+  pointer-events: none;
+}
+
+.label strong {
+  font-weight: 500;
+}
+
+/* Native select sits on top, invisible, so keyboard & screen readers get the real control */
+.select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  color: var(--black);
+}

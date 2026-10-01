@@ -1,0 +1,174 @@
+.thread {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 70px 50px 90px;
+  margin-top: 70px;
+}
+
+.count {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.list,
+.replies {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list > li + li {
+  margin-top: 30px;
+}
+
+.replies li {
+  position: relative;
+  padding-left: 155px;
+  margin-top: 16px;
+}
+
+.arrow {
+  position: absolute;
+  left: 100px;
+  top: 0;
+  font-size: 36px;
+  color: #aaa;
+}
+
+.comment {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px 80px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 26px;
+}
+
+.avatar {
+  font-size: 66px;
+  color: #c4c4c4;
+  flex: none;
+}
+
+.who {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+}
+
+.reply .who {
+  flex-direction: column;
+}
+
+.who h3 {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.who time {
+  font-size: 15px;
+  color: #555;
+}
+
+.text {
+  color: #222;
+  line-height: 1.6;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foot button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: none;
+  color: var(--black);
+  padding: 4px 18px;
+}
+
+.foot button svg {
+  font-size: 20px;
+}
+
+.foot button:hover {
+  color: var(--orange);
+}
+
+.replyBtn {
+  font-size: 13px;
+}
+
+.form {
+  display: grid;
+  gap: 30px;
+  padding: 60px 0 40px;
+}
+
+.form h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.note {
+  margin: -24px 0 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.cancel {
+  justify-self: start;
+  margin-top: -20px;
+  border: 0;
+  background: none;
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+@media (max-width: 767px) {
+  .thread {
+    padding: 40px 16px 50px;
+    border-radius: var(--radius);
+  }
+  .comment {
+    padding: 26px 22px;
+  }
+  .head {
+    gap: 14px;
+  }
+  .avatar {
+    font-size: 48px;
+  }
+  .replies li {
+    padding-left: 30px;
+  }
+  .arrow {
+    left: 0;
+    font-size: 24px;
+  }
+  .row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .form h2 {
+    font-size: 28px;
+  }
+}
