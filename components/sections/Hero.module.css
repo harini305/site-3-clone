@@ -213,6 +213,7 @@
   .art {
     position: absolute;
     inset: 0;
+    height: auto;
   }
   .sketch {
     top: 0;

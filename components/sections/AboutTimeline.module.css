@@ -52,7 +52,7 @@
 }
 
 .reverse .text {
-  padding: 140px 220px 0 0;
+  padding: 140px 120px 0 0;
 }
 
 .text h2 {
@@ -113,7 +113,7 @@
     padding-left: 160px;
   }
   .reverse .text {
-    padding-right: 160px;
+    padding-right: 120px;
   }
   .text h2 {
     font-size: 38px;
