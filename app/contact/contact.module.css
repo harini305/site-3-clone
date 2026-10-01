@@ -6,6 +6,15 @@
   padding-top: 80px;
 }
 
+.formCol {
+  scroll-margin-top: 20px;
+}
+
+.help {
+  padding-bottom: 130px;
+  scroll-margin-top: 20px;
+}
+
 .heading {
   margin-bottom: 30px;
 }
@@ -105,6 +114,9 @@
   .info {
     grid-template-columns: 1fr;
     padding: 60px 0;
+  }
+  .help {
+    padding-bottom: 70px;
   }
   .icon {
     width: 70px;

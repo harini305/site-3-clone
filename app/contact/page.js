@@ -2,6 +2,7 @@ import { IoLocationSharp, IoMail, IoCall } from 'react-icons/io5';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 import ContactForm from '@/components/sections/ContactForm';
+import Faq from '@/components/sections/Faq';
 import { site } from '@/data/site';
 import styles from './contact.module.css';
 
@@ -10,13 +11,14 @@ export const metadata = {
   description: 'Get in touch with Phlox Candy for custom orders, catering and questions.',
 };
 
-export default function ContactPage() {
+export default async function ContactPage({ searchParams }) {
+  const { topic } = await searchParams;
   return (
     <div className="container">
       <div className={styles.top}>
-        <Reveal className={styles.formCol}>
+        <Reveal className={styles.formCol} id="contact-form">
           <SectionHeading as="h1" align="left" size="lg" script="Contact With Us" title="Don’t Google Design Questions" className={styles.heading} />
-          <ContactForm />
+          <ContactForm key={topic || 'general'} initialTopic={topic} />
         </Reveal>
         <Reveal className={styles.map} effect="fade" delay={0.2}>
           <iframe
@@ -69,6 +71,13 @@ export default function ContactPage() {
           </div>
         </li>
       </Reveal>
+
+      <section id="help" className={styles.help} aria-labelledby="help-title">
+        <Reveal>
+          <SectionHeading id="help-title" script="Help Center" title="Frequently Asked Questions" />
+        </Reveal>
+        <Faq />
+      </section>
     </div>
   );
 }

@@ -1,13 +1,16 @@
 'use client';
 
 import { useState } from 'react';
+import { IoChevronDown } from 'react-icons/io5';
 import Button from '@/components/ui/Button';
+import { contactTopics } from '@/data/site';
 import styles from './ContactForm.module.css';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const empty = { name: '', email: '', question: '' };
 
-export default function ContactForm() {
+export default function ContactForm({ initialTopic = 'general' }) {
+  const topic = contactTopics.some((t) => t.value === initialTopic) ? initialTopic : 'general';
+  const empty = { name: '', email: '', topic, question: '' };
   const [values, setValues] = useState(empty);
   const [errors, setErrors] = useState({});
   const [sent, setSent] = useState(false);
@@ -76,6 +79,19 @@ export default function ContactForm() {
       <div className={styles.grid}>
         {field('name', { label: 'Your name', placeholder: 'Your Name *', autoComplete: 'name' })}
         {field('email', { label: 'Your email', placeholder: 'Your Email *', type: 'email', autoComplete: 'email' })}
+        <div className={`${styles.wide} ${styles.selectWrap}`}>
+          <label htmlFor="contact-topic" className="sr-only">
+            Topic
+          </label>
+          <select id="contact-topic" className="field" value={values.topic} onChange={set('topic')}>
+            {contactTopics.map((t) => (
+              <option key={t.value} value={t.value}>
+                {t.label}
+              </option>
+            ))}
+          </select>
+          <IoChevronDown aria-hidden="true" className={styles.chevron} />
+        </div>
         {field('question', { label: 'Your question', placeholder: 'Question *', textarea: true, wide: true })}
       </div>
       <div className={styles.submit}>

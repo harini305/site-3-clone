@@ -1,0 +1,105 @@
+.section {
+  padding: 100px 0;
+  scroll-margin-top: 20px;
+}
+
+.cream {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding-inline: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  padding: 40px 34px;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  transition: transform 0.4s var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.icon {
+  display: inline-grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background: var(--orange-soft);
+  color: var(--orange);
+  font-size: 30px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  margin: 0;
+  color: #555;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.member {
+  margin: 0;
+  text-align: center;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  transition: transform 0.5s var(--ease);
+}
+
+.member:hover .avatar {
+  transform: scale(1.06);
+}
+
+.member h3 {
+  font-size: 22px;
+}
+
+.member p {
+  margin: 4px 0 0;
+  color: var(--orange);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .cards,
+  .team {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding: 60px 0;
+  }
+  .cream {
+    padding-inline: 20px;
+    border-radius: var(--radius);
+  }
+  .cards,
+  .team {
+    grid-template-columns: 1fr;
+  }
+}

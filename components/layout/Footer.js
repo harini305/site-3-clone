@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import { FaInstagram, FaLinkedinIn, FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { footerColumns, socialLinks } from '@/data/site';
 import Logo from './Logo';
+import FooterLink from './FooterLink';
 import SubscribeBanner from './SubscribeBanner';
 import styles from './Footer.module.css';
 
@@ -21,7 +21,7 @@ export default function Footer() {
             <ul>
               {col.links.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <FooterLink href={link.href}>{link.label}</FooterLink>
                 </li>
               ))}
             </ul>
