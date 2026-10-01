@@ -1,0 +1,118 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid transparent;
+  border-radius: var(--pill);
+  font-family: var(--font-body);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color 0.35s var(--ease), border-color 0.35s var(--ease), transform 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+
+/* Fill sweep on hover */
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s var(--ease);
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.md {
+  min-width: 170px;
+  padding: 18px 34px;
+  font-size: 15px;
+}
+
+.sm {
+  padding: 13px 26px;
+  font-size: 14px;
+}
+
+.lg {
+  min-width: 200px;
+  padding: 20px 40px;
+  font-size: 16px;
+}
+
+.primary {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.primary::before {
+  background: var(--black);
+}
+
+.dark {
+  background: var(--black);
+  color: var(--white);
+}
+
+.dark::before {
+  background: var(--orange);
+}
+
+.outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: #ccc;
+  font-weight: 500;
+}
+
+.outline::before {
+  background: var(--black);
+}
+
+.outline:hover {
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.light {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.light::before {
+  background: var(--orange);
+}
+
+.light:hover {
+  color: var(--white);
+}
+
+@media (max-width: 767px) {
+  .md {
+    min-width: 130px;
+    padding: 16px 28px;
+  }
+}

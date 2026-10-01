@@ -1,0 +1,192 @@
+.header {
+  position: relative;
+  z-index: 50;
+  background: var(--white);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  min-height: 125px;
+  gap: 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
+.logo img {
+  width: 147px;
+  height: auto;
+}
+
+.divider {
+  width: 1px;
+  height: 30px;
+  background: #b9b9b9;
+}
+
+.nav ul {
+  display: flex;
+  gap: 42px;
+}
+
+.nav a {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  padding: 10px 0;
+  transition: color 0.25s;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s var(--ease);
+}
+
+.nav a:hover {
+  color: var(--black);
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav .active {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.tools {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.search {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  background: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--black);
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.search svg {
+  font-size: 22px;
+}
+
+.search:hover {
+  color: var(--orange);
+}
+
+.cartWrap {
+  position: relative;
+}
+
+.basket {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 188px;
+  height: 50px;
+  padding: 0 32px;
+  border: 0;
+  border-radius: var(--pill);
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 17px;
+  transition: background 0.3s, transform 0.3s var(--ease);
+}
+
+.basket:hover {
+  background: var(--black);
+}
+
+.basketIcon {
+  font-size: 22px;
+}
+
+.badge {
+  display: none;
+}
+
+.burger {
+  display: none;
+  border: 0;
+  background: none;
+  color: var(--black);
+  font-size: 34px;
+  padding: 4px;
+  line-height: 0;
+}
+
+@media (max-width: 1100px) {
+  .brand {
+    gap: 28px;
+  }
+  .nav ul {
+    gap: 26px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav,
+  .divider,
+  .search {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    min-height: 126px;
+  }
+  .logo img {
+    width: 146px;
+  }
+  .basket {
+    min-width: 0;
+    width: 50px;
+    padding: 0;
+  }
+  .basketLabel {
+    display: none;
+  }
+  .badge {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: var(--pill);
+    background: var(--black);
+    font-size: 11px;
+  }
+}

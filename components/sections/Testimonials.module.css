@@ -1,0 +1,77 @@
+.section {
+  padding-bottom: 120px;
+}
+
+.heading {
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: 90px;
+}
+
+.swiper {
+  padding-bottom: 50px !important;
+}
+
+.item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.avatar {
+  width: 147px;
+  height: 147px;
+  border-radius: 50%;
+  margin-bottom: 26px;
+  transition: transform 0.5s var(--ease);
+}
+
+.item:hover .avatar {
+  transform: scale(1.06);
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.company {
+  margin: 0 0 18px;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  color: #333;
+}
+
+.quote {
+  margin: 0 0 20px;
+  max-width: 230px;
+}
+
+.quote p {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Swiper pagination isn't needed when all four fit */
+@media (min-width: 1025px) {
+  .swiper :global(.swiper-pagination) {
+    display: none;
+  }
+  .swiper {
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding-bottom: 70px;
+  }
+  .heading {
+    margin-bottom: 50px;
+  }
+}

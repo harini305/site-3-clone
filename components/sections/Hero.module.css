@@ -1,0 +1,251 @@
+.section {
+  padding-top: 0;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 776px;
+  border-radius: 40px;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 58%;
+  padding: 120px 0 120px 160px;
+}
+
+.script {
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0 0 18px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: 0.01em;
+  margin-bottom: 40px;
+}
+
+.featured {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 50px;
+}
+
+.cookie {
+  flex: none;
+  width: 104px;
+  height: auto;
+}
+
+.featuredTitle {
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.featured p {
+  margin: 0;
+  max-width: 260px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.art {
+  position: absolute;
+  inset: 0 0 0 40%;
+  pointer-events: none;
+}
+
+.layer {
+  position: absolute;
+}
+
+.layer img {
+  width: 100%;
+  height: auto;
+}
+
+.sketch {
+  top: 0;
+  left: 6%;
+  width: 52%;
+}
+
+.wheat {
+  bottom: -2%;
+  left: 2%;
+  width: 26%;
+}
+
+.lettering {
+  top: 34%;
+  left: 7%;
+  width: 34%;
+}
+
+.seeds {
+  top: -9%;
+  right: -9%;
+  width: 66%;
+}
+
+.pastry {
+  top: 22%;
+  left: 21%;
+  width: 66%;
+  z-index: 1;
+}
+
+.tart {
+  bottom: -2%;
+  left: 47%;
+  width: 22%;
+  z-index: 2;
+}
+
+@media (max-width: 1280px) {
+  .content {
+    width: 56%;
+    padding-left: 90px;
+  }
+  .title {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .box {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+  }
+  .content {
+    width: 100%;
+    padding: 80px 60px 20px;
+    text-align: center;
+  }
+  .featured {
+    justify-content: center;
+    text-align: left;
+  }
+  .actions {
+    justify-content: center;
+  }
+  .art {
+    position: relative;
+    inset: auto;
+    height: 520px;
+  }
+  .sketch {
+    left: 20%;
+    width: 50%;
+  }
+  .pastry {
+    top: 18%;
+    left: 20%;
+    width: 60%;
+  }
+  .seeds {
+    top: -10%;
+    right: -14%;
+    width: 50%;
+  }
+  .tart {
+    left: 46%;
+    width: 22%;
+  }
+  .lettering {
+    left: 4%;
+    top: 20%;
+    width: 30%;
+  }
+}
+
+@media (max-width: 767px) {
+  .box {
+    border-radius: 30px;
+  }
+  .content {
+    padding: 110px 20px 10px;
+  }
+  .script {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .featured {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .featuredTitle {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .featured p {
+    margin-inline: auto;
+    font-size: 15px;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .art {
+    position: absolute;
+    inset: 0;
+  }
+  .sketch {
+    top: 0;
+    left: -10%;
+    width: 75%;
+  }
+  .seeds {
+    top: -2%;
+    right: -30%;
+    width: 80%;
+  }
+  .lettering {
+    top: 38%;
+    left: -2%;
+    width: 60%;
+  }
+  .wheat {
+    bottom: 0;
+    left: 6%;
+    width: 46%;
+  }
+  .pastry {
+    top: auto;
+    bottom: 9%;
+    left: 6%;
+    width: 86%;
+  }
+  .tart {
+    bottom: 0;
+    left: 40%;
+    width: 36%;
+  }
+  .box {
+    padding-bottom: 300px;
+  }
+}

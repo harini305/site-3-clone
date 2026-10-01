@@ -1,0 +1,6 @@
+.rating {
+  display: inline-flex;
+  gap: 3px;
+  color: var(--orange);
+  line-height: 1;
+}

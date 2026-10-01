@@ -1,0 +1,29 @@
+.price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.current {
+  text-decoration: none;
+}
+
+.old {
+  color: #888;
+  font-weight: 400;
+  font-size: 0.7em;
+}
+
+.sm {
+  font-size: 16px;
+}
+
+.md {
+  font-size: 20px;
+}
+
+.lg {
+  font-size: 36px;
+}
